@@ -19,12 +19,6 @@ library(lubridate) #for date-time handling
 #Set working directory
 WorkDir <- "/path/to/your/workdir"
 
-#Prepare I/O
-InDir <- file.path(WorkDir,"Input")
-OutDir <- file.path(WorkDir,"Output")
-dir.create(OutDir,showWarnings = F)
-OutputFile <- file.path(OutDir,"EMEP_data_daily_extracted.csv")
-
 #Define the number of decimal places for the extracted values
 #(NetCDF files provide values with lots of decimal places)
 ValueDecimalPrecision <- 4
@@ -33,6 +27,12 @@ ValueDecimalPrecision <- 4
 
 #  --- No changes required below this line ---
 
+
+#Prepare I/O-----
+InDir <- file.path(WorkDir,"Input")
+OutDir <- file.path(WorkDir,"Output")
+dir.create(OutDir,showWarnings = F)
+OutputFile <- file.path(OutDir,"EMEP_data_daily_extracted.csv")
 
 
 #Prepare coords for points to extract----

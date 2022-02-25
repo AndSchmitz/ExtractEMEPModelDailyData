@@ -91,6 +91,9 @@ nc_close(NetCDFFileHandle)
 
 
 #Create all combinations of X and Y coords
+#These are the *grid cell centers*. This is documented in the excel files
+#that can be downloaded here: https://www.ceip.at/the-emep-grid/grid-definiton
+#There it says: "longitude/latitude	center of a 0.1°x0.1° cell in degrees"
 AllCoords <- as.data.frame(expand.grid(
   Lon = File1_Lon,
   Lat = File1_Lat
